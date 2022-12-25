@@ -11,33 +11,33 @@ type Users struct {
 	gorm.Model
 	Uid                   uint   `gorm:"primaryKey;not null;default:'0';" json:"uid"`
 	Name                  string `gorm:"unique" json:"name"`
-	pass                  string
-	mail                  string
-	theme                 string
-	signature             string
-	signature_format      string
-	created               int  `gorm:"not null;default:'0';"`
-	access                int  `gorm:"not null;default:'0';"`
-	login                 int  `gorm:"not null;default:'0';"`
-	status                int8 `gorm:"not nulldefault:'0';"`
-	timezone              string
-	language              string
-	picture               int `gorm:"not null;default:'0';"`
-	init                  string
-	data                  string
-	suspended             int    `gorm:"not null;default:'0'"`
-	suspensions           int    `gorm:"not null;default:'0'"`
-	subscribed            int    `gorm:"not null;default:'0'"`
-	point                 int    `gorm:"not null;default:'0'"`
-	gamification_level    int    `gorm:"not null;default:'1'"`
-	gamification_capacity int    `gorm:"not null;default:'0'"`
-	webhook_transferred   int    `gorm:"not null;default:'0'"`
-	owner                 int    `gorm:"not null;default:'0'"`
-	emoji_count           uint   `gorm:"not null;default:'0'"`
-	emoji_details         string `gorm:"not null;default:''"`
-	monetization          int    `gorm:"not null;default:'0'"`
-	private               int    `gorm:"not null;default:'0'"`
-	changed               int    `gorm:"not null;default:'0'"`
+	Pass                  string `json:"pass"`
+	Mail                  string `json:"mail"`
+	Theme                 string `json:"theme"`
+	Signature             string `json:"signature"`
+	Signature_format      string `json:"signature_format"`
+	Created               int    `gorm:"not null;default:'0';" json:"Created"`
+	Access                int    `gorm:"not null;default:'0';" json:"access"`
+	Login                 int    `gorm:"not null;default:'0';" json:"login"`
+	Status                int8   `gorm:"not nulldefault:'0';" json:"status"`
+	Timezone              string `json:"timezone"`
+	Language              string `json:"language"`
+	Picture               int    `gorm:"not null;default:'0';" json:"picture"`
+	Init                  string `json:"init"`
+	Data                  string `json:"data"`
+	Suspended             int    `gorm:"not null;default:'0'" json:"suspended"`
+	Suspensions           int    `gorm:"not null;default:'0'" json:"suspension"`
+	Subscribed            int    `gorm:"not null;default:'0'" json:"subscribed"`
+	Point                 int    `gorm:"not null;default:'0'" json:"point"`
+	Gamification_level    int    `gorm:"not null;default:'1'" json:"gamification_level"`
+	Gamification_capacity int    `gorm:"not null;default:'0'" json:"gamification_capacity"`
+	Webhook_transferred   int    `gorm:"not null;default:'0'" json:"webhook_transferred"`
+	Owner                 int    `gorm:"not null;default:'0'" json:"owner"`
+	Emoji_count           uint   `gorm:"not null;default:'0'" json:"emoji_count"`
+	Emoji_details         string `gorm:"not null;default:''" json:"emoji_details"`
+	Monetization          int    `gorm:"not null;default:'0'" json:"monetization"`
+	Private               int    `gorm:"not null;default:'0'" json:"private"`
+	Changed               int    `gorm:"not null;default:'0'" json:"changed"`
 }
 
 func init() {
